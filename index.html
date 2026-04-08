@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RAHUL BORA ENGINEER'S & ASSOCIATES</title>
+    <link rel="icon" type="image/png" href="rahulbora_logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -15,9 +16,9 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #1e3c72);
-            background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
+            background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1a3a3a, #134e5e, #71b280);
+            background-size: 600% 600%;
+            animation: gradientBG 20s ease infinite;
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -27,14 +28,42 @@
 
         @keyframes gradientBG {
             0% { background-position: 0% 50%; }
+            25% { background-position: 50% 100%; }
             50% { background-position: 100% 50%; }
+            75% { background-position: 50% 0%; }
             100% { background-position: 0% 50%; }
         }
 
         .container {
-            max-width: 500px;
+            max-width: 900px;
             width: 100%;
             text-align: center;
+        }
+
+        .content-wrapper {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+            flex-direction: row-reverse;
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        .right-section {
+            flex: 0 0 250px;
+        }
+
+        @media (max-width: 768px) {
+            .right-section {
+                flex: 1;
+                width: 100%;
+                max-width: 500px;
+            }
         }
 
         .header {
@@ -147,6 +176,59 @@
         .link-card.contact i { color: #25d366; }
         .link-card.more i { color: #ff6b35; }
         .link-card.address i { color: #e74c3c; }
+        .link-card.reviews i { color: #4285f4; }
+        .link-card.feedback i { color: #9b59b6; }
+
+        .qr-section {
+            background: rgba(255,255,255,0.95);
+            border-radius: 16px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .qr-section h3 {
+            color: #1a1a2e;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        #qrcode {
+            display: inline-block;
+            padding: 12px;
+            background: white;
+            border: 2px dashed #e74c3c;
+            border-radius: 12px;
+        }
+
+        #qrcode img {
+            width: 180px;
+            height: 180px;
+        }
+
+        .qr-section p {
+            color: #666;
+            font-size: 0.75rem;
+            margin-top: 10px;
+        }
+
+        .download-btn {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            font-size: 0.8rem;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .download-btn:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+        }
 
         .link-card h3 {
             font-size: 0.95rem;
@@ -172,7 +254,25 @@
             <p>Civil Engineering Consultancy | Est. 2001</p>
         </div>
 
-        <div class="links-grid">
+        <div class="content-wrapper">
+            <div class="left-section">
+                <div class="links-grid">
+            <a href="#" class="link-card website">
+                <i class="fas fa-globe"></i>
+                <h3>Website</h3>
+            </a>
+            <a href="https://wa.me/919423168647?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20civil%20engineering%20services.%0A%0AService%20Required%3A%20%0A-%20Structural%20Design%20(RCC%2FSteel)%0A-%20Building%20Planning%20%26%20Estimation%0A-%20Surveying%20%26%20Valuation%0A-%20Project%20Management%20%26%20PMC%0A-%20Water%20Supply%20%2F%20Irrigation%20Projects%0A-%20Road%20%26%20Infrastructure%20Work%0A%0APlease%20share%20your%20requirements%20for%20further%20discussion." target="_blank" class="link-card website">
+                <i class="fab fa-whatsapp"></i>
+                <h3>WhatsApp</h3>
+            </a>
+            <a href="tel:+919423168647" class="link-card contact">
+                <i class="fas fa-phone"></i>
+                <h3>Call</h3>
+            </a>
+            <a href="https://www.facebook.com/share/17r2HNYm3u/" target="_blank" class="link-card facebook">
+                <i class="fab fa-facebook"></i>
+                <h3>Facebook</h3>
+            </a>
             <a href="https://www.instagram.com/rtn_rahulbora?utm_source=qr&igsh=MTU3NHd2cm85d2sy" target="_blank" class="link-card instagram">
                 <i class="fab fa-instagram"></i>
                 <h3>Instagram (Personal)</h3>
@@ -181,35 +281,58 @@
                 <i class="fab fa-instagram"></i>
                 <h3>Instagram (Business)</h3>
             </a>
-            <a href="https://www.facebook.com/share/17r2HNYm3u/" target="_blank" class="link-card facebook">
-                <i class="fab fa-facebook"></i>
-                <h3>Facebook</h3>
-            </a>
-            <a href="tel:+919423168647" class="link-card contact">
-                <i class="fas fa-phone"></i>
-                <h3>Call +91 94231 68647</h3>
-            </a>
-            <a href="sms:+919423168647" class="link-card contact">
-                <i class="fas fa-comment"></i>
-                <h3>Text +91 94231 68647</h3>
-            </a>
-            <a href="https://wa.me/919423168647" target="_blank" class="link-card website">
-                <i class="fab fa-whatsapp"></i>
-                <h3>WhatsApp</h3>
-            </a>
             <a href="mailto:ruthikb97@gmail.com" class="link-card more">
                 <i class="fas fa-envelope"></i>
                 <h3>Email</h3>
             </a>
             <a href="https://maps.google.com/?q=Rahul+Bora+Engineers+And+Associates,Jijamata+Chowk,New+Mondha+Rd,Sawata+Nagar,Beed,Maharashtra+431122" target="_blank" class="link-card address">
                 <i class="fas fa-map-marker-alt"></i>
-                <h3>Beed, MH</h3>
+                <h3>Location</h3>
             </a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Rahul+Bora+Engineers+And+Associates+Beed+431122" target="_blank" class="link-card reviews">
+                <i class="fab fa-google"></i>
+                <h3>Review</h3>
+            </a>
+            <a href="mailto:ruthikb97@gmail.com?subject=Feedback" class="link-card feedback">
+                <i class="fas fa-comment-dots"></i>
+                <h3>Feedback</h3>
+            </a>
+                </div>
+            </div>
+
+            <div class="right-section">
+                <div class="qr-section">
+                    <h3><i class="fas fa-qrcode"></i> Scan</h3>
+                    <div id="qrcode"></div>
+                    <p>Scan to visit website</p>
+                    <button class="download-btn" onclick="downloadQR()">Download</button>
+                </div>
+            </div>
         </div>
 
         <div class="footer">
             <p>Er. Rahul Rajmal Bora, Director</p>
         </div>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script>
+        new QRCode(document.getElementById("qrcode"), {
+            text: "https://tanmay0329.github.io/rahul-bora-engineers-associates/",
+            width: 180,
+            height: 180,
+            colorDark: "#1a1a2e",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H
+        });
+
+        function downloadQR() {
+            const qrCanvas = document.querySelector("#qrcode canvas");
+            const link = document.createElement("a");
+            link.download = "rahul-bora-engineers-qr.png";
+            link.href = qrCanvas.toDataURL("image/png");
+            link.click();
+        }
+    </script>
 </body>
 </html>
