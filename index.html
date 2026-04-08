@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAHUL BORA ENGINEER'S & ASSOCIATES</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #1e3c72);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .header {
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 1.6rem;
+            margin-bottom: 8px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 0.95rem;
+            opacity: 0.85;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            border-radius: 24px;
+            object-fit: contain;
+            margin-bottom: 20px;
+            border: 3px solid rgba(255,255,255,0.3);
+            box-shadow: 
+                0 8px 32px rgba(0,0,0,0.3),
+                0 0 0 1px rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.4s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05) rotate(2deg);
+            box-shadow: 
+                0 12px 40px rgba(0,0,0,0.4),
+                0 0 0 1px rgba(255,255,255,0.2);
+        }
+
+        .links-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .link-card {
+            background: rgba(255,255,255,0.95);
+            border-radius: 16px;
+            padding: 20px 28px;
+            text-decoration: none;
+            color: #1a1a2e;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 
+                0 4px 20px rgba(0,0,0,0.1),
+                0 0 0 1px rgba(255,255,255,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .link-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .link-card:hover::before {
+            left: 100%;
+        }
+
+        .link-card:hover {
+            transform: translateX(8px) scale(1.02);
+            box-shadow: 
+                0 8px 30px rgba(0,0,0,0.2),
+                0 0 0 1px rgba(255,255,255,0.2);
+            background: rgba(255,255,255,1);
+        }
+
+        .link-card i {
+            font-size: 1.6rem;
+            width: 32px;
+            transition: transform 0.3s ease;
+        }
+
+        .link-card:hover i {
+            transform: scale(1.15);
+        }
+
+        .link-card.instagram i { color: #e4405f; }
+        .link-card.facebook i { color: #1877f2; }
+        .link-card.website i { color: #2a5298; }
+        .link-card.contact i { color: #25d366; }
+        .link-card.more i { color: #ff6b35; }
+
+        .link-card h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            letter-spacing: -0.3px;
+        }
+
+        .footer {
+            color: white;
+            margin-top: 35px;
+            font-size: 0.85rem;
+            opacity: 0.7;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="rahulbora_logo.png" alt="RAHUL BORA ENGINEER'S & ASSOCIATES" class="logo">
+            <h1>RAHUL BORA ENGINEER'S & ASSOCIATES</h1>
+            <p>Civil Engineering Consultancy | Est. 2001</p>
+        </div>
+
+        <div class="links-grid">
+            <a href="#" class="link-card instagram">
+                <i class="fab fa-instagram"></i>
+                <h3>Instagram</h3>
+            </a>
+            <a href="#" class="link-card facebook">
+                <i class="fab fa-facebook"></i>
+                <h3>Facebook</h3>
+            </a>
+            <a href="#" class="link-card website">
+                <i class="fas fa-globe"></i>
+                <h3>Website</h3>
+            </a>
+            <a href="#" class="link-card contact">
+                <i class="fas fa-phone"></i>
+                <h3>Contact</h3>
+            </a>
+            <a href="#" class="link-card more">
+                <i class="fas fa-info-circle"></i>
+                <h3>More</h3>
+            </a>
+        </div>
+
+        <div class="footer">
+            <p>Er. Rahul Rajmal Bora, Director</p>
+        </div>
+    </div>
+</body>
+</html>
