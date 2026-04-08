@@ -80,20 +80,26 @@
         }
 
         .links-grid {
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
             gap: 15px;
+        }
+
+        @media (max-width: 480px) {
+            .links-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         .link-card {
             background: rgba(255,255,255,0.95);
             border-radius: 16px;
-            padding: 20px 28px;
+            padding: 18px 20px;
             text-decoration: none;
             color: #1a1a2e;
             display: flex;
             align-items: center;
-            gap: 18px;
+            gap: 12px;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             box-shadow: 
                 0 4px 20px rgba(0,0,0,0.1),
@@ -118,7 +124,7 @@
         }
 
         .link-card:hover {
-            transform: translateX(8px) scale(1.02);
+            transform: scale(1.03);
             box-shadow: 
                 0 8px 30px rgba(0,0,0,0.2),
                 0 0 0 1px rgba(255,255,255,0.2);
@@ -140,9 +146,10 @@
         .link-card.website i { color: #2a5298; }
         .link-card.contact i { color: #25d366; }
         .link-card.more i { color: #ff6b35; }
+        .link-card.address i { color: #e74c3c; }
 
         .link-card h3 {
-            font-size: 1.15rem;
+            font-size: 0.95rem;
             font-weight: 600;
             letter-spacing: -0.3px;
         }
@@ -166,25 +173,37 @@
         </div>
 
         <div class="links-grid">
-            <a href="#" class="link-card instagram">
+            <a href="https://www.instagram.com/rtn_rahulbora?utm_source=qr&igsh=MTU3NHd2cm85d2sy" target="_blank" class="link-card instagram">
                 <i class="fab fa-instagram"></i>
-                <h3>Instagram</h3>
+                <h3>Instagram (Personal)</h3>
             </a>
-            <a href="#" class="link-card facebook">
+            <a href="https://www.instagram.com/rbengineers_?utm_source=qr&igsh=Ym54NTAxNzU4Zmlq" target="_blank" class="link-card instagram">
+                <i class="fab fa-instagram"></i>
+                <h3>Instagram (Business)</h3>
+            </a>
+            <a href="https://www.facebook.com/share/17r2HNYm3u/" target="_blank" class="link-card facebook">
                 <i class="fab fa-facebook"></i>
                 <h3>Facebook</h3>
             </a>
-            <a href="#" class="link-card website">
-                <i class="fas fa-globe"></i>
-                <h3>Website</h3>
-            </a>
-            <a href="#" class="link-card contact">
+            <a href="tel:+919423168647" class="link-card contact">
                 <i class="fas fa-phone"></i>
-                <h3>Contact</h3>
+                <h3>Call +91 94231 68647</h3>
             </a>
-            <a href="#" class="link-card more">
-                <i class="fas fa-info-circle"></i>
-                <h3>More</h3>
+            <a href="sms:+919423168647" class="link-card contact">
+                <i class="fas fa-comment"></i>
+                <h3>Text +91 94231 68647</h3>
+            </a>
+            <a href="https://wa.me/919423168647" target="_blank" class="link-card website">
+                <i class="fab fa-whatsapp"></i>
+                <h3>WhatsApp</h3>
+            </a>
+            <a href="mailto:ruthikb97@gmail.com" class="link-card more">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+            </a>
+            <a href="https://maps.google.com/?q=Rahul+Bora+Engineers+And+Associates,Jijamata+Chowk,New+Mondha+Rd,Sawata+Nagar,Beed,Maharashtra+431122" target="_blank" class="link-card address">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Beed, MH</h3>
             </a>
         </div>
 
