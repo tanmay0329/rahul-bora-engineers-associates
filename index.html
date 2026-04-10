@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RAHUL BORA ENGINEER'S & ASSOCIATES</title>
-    <link rel="icon" type="image/png" href="rahulbora_logo.png">
+    <link rel="icon" type="image/png" href="final_logo_rahulbora.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -86,26 +86,107 @@
             letter-spacing: 0.5px;
         }
 
+        .logo-wrapper {
+            position: relative;
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 20px;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow:
+                0 8px 32px rgba(0,0,0,0.3),
+                0 0 0 1px rgba(255,255,255,0.1);
+            transition: all 0.4s ease;
+        }
+
+        .logo-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(ellipse at 30% 20%, rgba(64, 224, 255, 0.6) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 60%, rgba(0, 200, 255, 0.5) 0%, transparent 40%),
+                radial-gradient(ellipse at 40% 80%, rgba(100, 230, 255, 0.4) 0%, transparent 45%),
+                radial-gradient(ellipse at 80% 30%, rgba(50, 210, 255, 0.5) 0%, transparent 35%),
+                linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #1e3c72 100%);
+            animation: waterSplash 4s ease-in-out infinite;
+        }
+
+        .logo-wrapper::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(circle at 20% 30%, rgba(255,255,255,0.3) 0%, transparent 20%),
+                radial-gradient(circle at 80% 70%, rgba(255,255,255,0.2) 0%, transparent 15%),
+                radial-gradient(circle at 60% 20%, rgba(255,255,255,0.25) 0%, transparent 25%);
+            animation: waterRipple 3s ease-in-out infinite;
+        }
+
+        @keyframes waterSplash {
+            0%, 100% {
+                transform: scale(1) rotate(0deg);
+                filter: hue-rotate(0deg);
+            }
+            25% {
+                transform: scale(1.05) rotate(1deg);
+                filter: hue-rotate(5deg);
+            }
+            50% {
+                transform: scale(1.02) rotate(-1deg);
+                filter: hue-rotate(-5deg);
+            }
+            75% {
+                transform: scale(1.08) rotate(2deg);
+                filter: hue-rotate(3deg);
+            }
+        }
+
+        @keyframes waterRipple {
+            0%, 100% {
+                opacity: 0.6;
+                transform: translateX(0) translateY(0);
+            }
+            33% {
+                opacity: 0.8;
+                transform: translateX(5px) translateY(-3px);
+            }
+            66% {
+                opacity: 0.5;
+                transform: translateX(-3px) translateY(5px);
+            }
+        }
+
         .logo {
+            position: relative;
+            z-index: 10;
             width: 150px;
             height: 150px;
             border-radius: 24px;
-            object-fit: contain;
-            margin-bottom: 20px;
-            border: 3px solid rgba(255,255,255,0.3);
-            box-shadow: 
-                0 8px 32px rgba(0,0,0,0.3),
-                0 0 0 1px rgba(255,255,255,0.1);
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
+            object-fit: cover;
+            margin: 10px;
             transition: all 0.4s ease;
         }
 
         .logo:hover {
+            transform: scale(1.02);
+        }
+
+        .logo-wrapper:hover {
             transform: scale(1.05) rotate(2deg);
-            box-shadow: 
+            box-shadow:
                 0 12px 40px rgba(0,0,0,0.4),
-                0 0 0 1px rgba(255,255,255,0.2);
+                0 0 30px rgba(64, 224, 255, 0.3);
+        }
+
+        .logo-wrapper:hover::before {
+            animation-duration: 2s;
         }
 
         .links-grid {
@@ -249,7 +330,9 @@
 <body>
     <div class="container">
         <div class="header">
-            <img src="rahulbora_logo.png" alt="RAHUL BORA ENGINEER'S & ASSOCIATES" class="logo">
+            <div class="logo-wrapper">
+                <img src="final_logo_rahulbora.png" alt="RAHUL BORA ENGINEER'S & ASSOCIATES" class="logo">
+            </div>
             <h1>RAHUL BORA ENGINEER'S & ASSOCIATES</h1>
             <p>Civil Engineering Consultancy | Est. 2001</p>
         </div>
@@ -261,7 +344,7 @@
                 <i class="fas fa-globe"></i>
                 <h3>Website</h3>
             </a>
-            <a href="https://wa.me/919423168647?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20civil%20engineering%20services.%0A%0AService%20Required%3A%20%0A-%20Structural%20Design%20(RCC%2FSteel)%0A-%20Building%20Planning%20%26%20Estimation%0A-%20Surveying%20%26%20Valuation%0A-%20Project%20Management%20%26%20PMC%0A-%20Water%20Supply%20%2F%20Irrigation%20Projects%0A-%20Road%20%26%20Infrastructure%20Work%0A%0APlease%20share%20your%20requirements%20for%20further%20discussion." target="_blank" class="link-card website">
+            <a href="https://wa.me/919423168647?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20civil%20engineering%20services.%0A%0AService%20Required%3A%20%0A-%20Structural%20Design%20(RCC%2FSteel)%0A-%20Building%20Planning%20%26%20Estimation%0A-%20Project%20Management%20%26%20PMC%0A-%20Water%20Supply%20%2F%20Irrigation%20Projects%0A-%20Road%20%26%20Infrastructure%20Work%0A%0APlease%20share%20your%20requirements%20for%20further%20discussion." target="_blank" class="link-card website">
                 <i class="fab fa-whatsapp"></i>
                 <h3>WhatsApp</h3>
             </a>
