@@ -88,46 +88,26 @@
 
         .logo-wrapper {
             position: relative;
-            width: 180px;
-            height: 180px;
-            margin: 0 auto 20px;
-            border-radius: 24px;
-            overflow: hidden;
+            width: 170px;
+            height: 170px;
+            margin: 20px auto;
+            border-radius: 16px;
+            overflow: visible;
             box-shadow:
                 0 8px 32px rgba(0,0,0,0.3),
                 0 0 0 1px rgba(255,255,255,0.1);
             transition: all 0.4s ease;
-        }
-
-        .logo-wrapper::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            padding: 10px;
+            box-sizing: border-box;
             background:
-                radial-gradient(ellipse at 30% 20%, rgba(64, 224, 255, 0.6) 0%, transparent 50%),
-                radial-gradient(ellipse at 70% 60%, rgba(0, 200, 255, 0.5) 0%, transparent 40%),
-                radial-gradient(ellipse at 40% 80%, rgba(100, 230, 255, 0.4) 0%, transparent 45%),
-                radial-gradient(ellipse at 80% 30%, rgba(50, 210, 255, 0.5) 0%, transparent 35%),
-                linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #1e3c72 100%);
+                radial-gradient(ellipse at 30% 20%, rgba(0, 200, 255, 0.8) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 60%, rgba(0, 180, 255, 0.7) 0%, transparent 40%),
+                radial-gradient(ellipse at 40% 80%, rgba(100, 220, 255, 0.6) 0%, transparent 45%),
+                radial-gradient(ellipse at 80% 30%, rgba(0, 200, 255, 0.7) 0%, transparent 35%),
+                linear-gradient(135deg, #0d4f6f 0%, #1e7bb4 50%, #0d4f6f 100%);
             animation: waterSplash 4s ease-in-out infinite;
         }
 
-        .logo-wrapper::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background:
-                radial-gradient(circle at 20% 30%, rgba(255,255,255,0.3) 0%, transparent 20%),
-                radial-gradient(circle at 80% 70%, rgba(255,255,255,0.2) 0%, transparent 15%),
-                radial-gradient(circle at 60% 20%, rgba(255,255,255,0.25) 0%, transparent 25%);
-            animation: waterRipple 3s ease-in-out infinite;
-        }
 
         @keyframes waterSplash {
             0%, 100% {
@@ -168,9 +148,8 @@
             z-index: 10;
             width: 150px;
             height: 150px;
-            border-radius: 24px;
+            border-radius: 10px;
             object-fit: cover;
-            margin: 10px;
             transition: all 0.4s ease;
         }
 
@@ -428,9 +407,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <div class="logo-wrapper">
-                <img src="final_logo_rahulbora.png" alt="RAHUL BORA ENGINEER'S & ASSOCIATES" class="logo">
-            </div>
+                <img src="logo.jpeg" alt="RAHUL BORA ENGINEER'S & ASSOCIATES" class="logo">
             <h1>RAHUL BORA ENGINEER'S & ASSOCIATES</h1>
             <p>Civil Engineering Consultancy | Est. 2001</p>
         </div>
